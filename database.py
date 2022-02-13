@@ -1,4 +1,3 @@
-from telnetlib import EC
 import pymongo
 from config import *
 
