@@ -50,7 +50,7 @@ class Database:
 
     def get_settings(self):
         try:
-            settings = self.settings.find_one()
+            settings = self.settings.find_one({"service": "inviting"})
             return settings
         except Exception as error:
             logger.error(error)

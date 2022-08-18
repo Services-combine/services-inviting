@@ -15,7 +15,7 @@ class Inviting:
     def __init__(self):
         try:
             self.db = Database() 
-            logger.info("Success connect to MySQL")
+            logger.info("Success connect to MongoDB")
         except Exception as error:
             logger.error(error)
 
@@ -207,7 +207,6 @@ class Inviting:
             groups = folder['groups']
             message = folder["message"]
             accounts = self.db.get_accounts_folder(folder["_id"])
-            settings = self.db.get_settings()
                 
             for account in accounts:
                 if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["verify"] and account["status_block"] == 'clean':
@@ -252,7 +251,6 @@ class Inviting:
                 time.sleep(15)
         except Exception as error:
             logger.error(error)
-
 
 inviting = Inviting()
 inviting.start_check()
