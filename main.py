@@ -233,7 +233,7 @@ class Inviting:
             print(f'[ERROR] {error}')
 
 
-    def start_check(self):
+    def start(self):
         try:
             while True:
                 folder = self.db.get_folder_launch_inviting()
@@ -252,5 +252,6 @@ class Inviting:
         except Exception as error:
             logger.error(error)
 
+
 inviting = Inviting()
-inviting.start_check()
+inviting.start()

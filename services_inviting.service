@@ -4,8 +4,8 @@ Description=services inviting
 [Service]
 User=q
 Type=simple
-WorkingDirectory=/home/q/services/backend/python/inviting
-ExecStart=/usr/bin/python3 /home/q/services/services-backend/python/inviting/main.py
+WorkingDirectory=/home/q/services/services-inviting
+ExecStart=/usr/bin/python3 /home/q/services/services-inviting/main.py
 Restart=always
 
 [Install]

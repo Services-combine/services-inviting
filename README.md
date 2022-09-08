@@ -1,6 +1,6 @@
 # services-inviting
 
-The server part of the site with services for advertising and promotion of goods. At the moment there is a service for inviting and mailing in telegram. To do this, you will have to add telegram accounts on the site, which will perform these functions
+A script that will perform all the automation on youtube implemented in this service
 
 ![Python][python-version]
 
@@ -33,7 +33,6 @@ pip install requirements.txt
 
 ---
 ## Usage
-The port on which the service will be launched is specified in the file `configs/config.yml`
 
 To start, run
 ```
@@ -42,7 +41,7 @@ python3 ./main.py
 
 ---
 ## Additionally
-A `services-inviting.service` file was also created to run this bot on the server
+A `services_inviting.service` file was also created to run this bot on the server
 
 
 [python-version]: https://img.shields.io/static/v1?label=Python&message=v3.8&color=blue
