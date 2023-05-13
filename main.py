@@ -121,7 +121,7 @@ class Inviting:
             settings = self.db.get_settings()
             
             for account in accounts:
-                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["verify"] and account["status_block"] == 'clean':
+                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["status_block"] == 'clean':
                     try:
                         if usernames != []:
                             logger.info(f'Start inviting {account["name"]}')
@@ -165,7 +165,7 @@ class Inviting:
             settings = self.db.get_settings()
             
             for account in accounts:
-                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["verify"] and account["status_block"] == 'clean':
+                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["status_block"] == 'clean':
                     try:
                         if usernames != []:
                             logger.info(f"Start mailing {account['name']}")
@@ -209,7 +209,7 @@ class Inviting:
             accounts = self.db.get_accounts_folder(folder["_id"])
                 
             for account in accounts:
-                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["verify"] and account["status_block"] == 'clean':
+                if account["interval"] != None and account["interval"] != 0 and account["launch"] and account["status_block"] == 'clean':
                     try:
                         logger.info(f"Start mailing {account['name']}")
                         self.mailing_group(account, groups, message)
